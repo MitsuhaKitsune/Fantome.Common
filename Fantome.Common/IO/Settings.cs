@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Fantome.Common
+namespace Fantome.Common.IO
 {
     public class Settings
     {
