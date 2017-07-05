@@ -20,7 +20,7 @@ namespace Fantome.Common.IO
         {
             if(this.Archive.EntryFileNames.Contains("_meta/info.json"))
             {
-                return JsonConvert.DeserializeObject<PackageInfo>(new StreamReader(this.Archive.Entries.First(x => x.FileName.Contains("_meta/info.json")).InputStream).ReadToEnd());
+                return JsonConvert.DeserializeObject<PackageInfo>(new StreamReader(this.Archive.Entries.First(x => x.FileName == "_meta/info.json").InputStream).ReadToEnd());
             }
             else
             {
@@ -32,7 +32,7 @@ namespace Fantome.Common.IO
         {
             if (this.Archive.EntryFileNames.Contains("_meta/iamge.png"))
             {
-                return Image.FromStream(this.Archive.Entries.First(x => x.FileName.Contains("_meta/image.png")).InputStream);
+                return Image.FromStream(this.Archive.Entries.First(x => x.FileName == "_meta/image.png").InputStream);
             }
             else
             {
