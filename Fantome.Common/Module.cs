@@ -1,4 +1,5 @@
-﻿using System;
+using Fantome.Common.IO;
+using System;
 using System.Windows.Controls;
 
 namespace Fantome.Common
